@@ -9,7 +9,7 @@ class FlutterReactionButton extends StatefulWidget {
   final Function(Reaction, int) onReactionChanged;
 
   /// Default reaction button widget
-  final Reaction initialReaction;
+  final Widget defaultButton;
 
   final List<Reaction> reactions;
 
@@ -36,7 +36,7 @@ class FlutterReactionButton extends StatefulWidget {
     Key key,
     @required this.onReactionChanged,
     @required this.reactions,
-    this.initialReaction,
+    this.defaultButton,
     this.highlightColor,
     this.splashColor,
     this.boxPosition = Position.TOP,
@@ -54,15 +54,7 @@ class FlutterReactionButton extends StatefulWidget {
 class _FlutterReactionButtonState extends State<FlutterReactionButton> {
   final GlobalKey _buttonKey = GlobalKey();
 
-  Reaction _selectedReaction;
-
   _FlutterReactionButtonState();
-
-  @override
-  void initState() {
-    super.initState();
-    _selectedReaction = widget.initialReaction;
-  }
 
   @override
   Widget build(BuildContext context) => InkWell(
@@ -70,7 +62,7 @@ class _FlutterReactionButtonState extends State<FlutterReactionButton> {
         highlightColor: widget.highlightColor,
         splashColor: widget.splashColor,
         onTap: () => _showReactionButtons(context),
-        child: (_selectedReaction ?? widget.reactions[0]).icon,
+        child: widget.defaultButton,
       );
 
   void _showReactionButtons(BuildContext context) async {
@@ -99,8 +91,5 @@ class _FlutterReactionButtonState extends State<FlutterReactionButton> {
   void _updateReaction(Reaction reaction) {
     final selectedIndex = widget.reactions.indexOf(reaction);
     widget.onReactionChanged(reaction, selectedIndex);
-    setState(() {
-      _selectedReaction = reaction;
-    });
   }
 }

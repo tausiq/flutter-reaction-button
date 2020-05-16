@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
                 print('reaction changed at $selectedIndex');
               },
               reactions: Example.flagsReactions,
-              initialReaction: Example.flagsReactions[0],
+              defaultButton: Text('Like'),
               boxColor: Colors.black.withOpacity(0.5),
               boxRadius: 10,
               boxDuration: Duration(milliseconds: 500),

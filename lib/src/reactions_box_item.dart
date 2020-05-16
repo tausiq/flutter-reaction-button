@@ -70,7 +70,7 @@ class _ReactionsBoxItemState extends State<ReactionsBoxItem>
         },
         splashColor: widget.splashColor,
         highlightColor: widget.highlightColor,
-        child: widget.reaction.previewIcon,
+        child: widget.reaction.child,
       ),
     );
   }

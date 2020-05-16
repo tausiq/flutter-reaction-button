@@ -4,63 +4,50 @@ import 'package:flutter_reaction_button/flutter_reaction_button.dart';
 
 List<Reaction> flagsReactions = [
   Reaction(
-    previewIcon:
-        _buildPreviewIcon('assets/images/united-kingdom-round.png', 'English'),
-    icon: _buildIcon('assets/images/united-kingdom.png'),
+    child: _buildIcon('assets/images/united-kingdom.png'),
   ),
   Reaction(
-    previewIcon: _buildPreviewIcon('assets/images/algeria-round.png', 'Arabic'),
-    icon: _buildIcon('assets/images/algeria.png'),
+    child: _buildIcon('assets/images/algeria.png'),
   ),
   Reaction(
-    previewIcon: _buildPreviewIcon('assets/images/germany-round.png', 'German'),
-    icon: _buildIcon('assets/images/germany.png'),
+    child: _buildIcon('assets/images/germany.png'),
   ),
   Reaction(
-    previewIcon: _buildPreviewIcon('assets/images/spain-round.png', 'Spanish'),
-    icon: _buildIcon('assets/images/spain.png'),
+    child: _buildIcon('assets/images/spain.png'),
   ),
   Reaction(
-    previewIcon: _buildPreviewIcon('assets/images/china-round.png', 'Chinese'),
-    icon: _buildIcon('assets/images/china.png'),
+    child: _buildIcon('assets/images/china.png'),
   ),
 ];
 
 final defaultInitialReaction = Reaction(
-  previewIcon: _buildPreviewIconFacebook('assets/images/like.png'),
-  icon: _buildIconFacebook('assets/images/like.png',
+  child: _buildIconFacebook('assets/images/like.png',
       Text('Like', style: TextStyle(color: Colors.grey[600]))),
 );
 
 final facebookReactions = [
   Reaction(
-    previewIcon: _buildPreviewIconFacebook('assets/images/like.gif'),
-    icon: _buildIconFacebook('assets/images/like_fill.png',
+    child: _buildIconFacebook('assets/images/like_fill.png',
         Text('Like', style: TextStyle(color: Color(0XFF3b5998)))),
   ),
   Reaction(
-    previewIcon: _buildPreviewIconFacebook('assets/images/love.gif'),
-    icon: _buildIconFacebook('assets/images/love.png',
+    child: _buildIconFacebook('assets/images/love.png',
         Text('Love', style: TextStyle(color: Color(0XFFed5168)))),
   ),
   Reaction(
-    previewIcon: _buildPreviewIconFacebook('assets/images/wow.gif'),
-    icon: _buildIconFacebook('assets/images/wow.png',
+    child: _buildIconFacebook('assets/images/wow.png',
         Text('Wow', style: TextStyle(color: Color(0XFFffda6b)))),
   ),
   Reaction(
-    previewIcon: _buildPreviewIconFacebook('assets/images/haha.gif'),
-    icon: _buildIconFacebook('assets/images/haha.png',
+    child: _buildIconFacebook('assets/images/haha.png',
         Text('Haha', style: TextStyle(color: Color(0XFFffda6b)))),
   ),
   Reaction(
-    previewIcon: _buildPreviewIconFacebook('assets/images/sad.gif'),
-    icon: _buildIconFacebook('assets/images/sad.png',
+    child: _buildIconFacebook('assets/images/sad.png',
         Text('Sad', style: TextStyle(color: Color(0XFFffda6b)))),
   ),
   Reaction(
-      previewIcon: _buildPreviewIconFacebook('assets/images/angry.gif'),
-      icon: _buildIconFacebook('assets/images/angry.png',
+      child: _buildIconFacebook('assets/images/angry.png',
           Text('Angry', style: TextStyle(color: Color(0XFFf05766))))),
 ];
 
