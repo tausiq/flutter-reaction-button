@@ -13,7 +13,10 @@
 *.iml
 *.ipr
 *.iws
-.idea/
+.idea/*
+flutter_reaction_button.iml
+*/.flutter-plugins-dependencies
+*/flutter_export_environment.sh
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
@@ -28,6 +31,8 @@
 .pub-cache/
 .pub/
 build/
+pubspec.lock
+
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -70,3 +75,4 @@ build/
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+/example/ios/Flutter/flutter_export_environment.sh
